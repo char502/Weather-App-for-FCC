@@ -1,0 +1,24 @@
+{
+  "name": "Weather-App-for-FCC",
+  "version": "1.0.0",
+  "description": "Weather App for FCC Projects",
+  "main": "index.js",
+  "dependencies": {
+    "standard": "^11.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/char502/Weather-App-for-FCC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/char502/Weather-App-for-FCC/issues"
+  },
+  "homepage": "https://github.com/char502/Weather-App-for-FCC#readme"
+}
