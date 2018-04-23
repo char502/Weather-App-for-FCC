@@ -1,33 +1,46 @@
-.body {
+body {
+  font-family: "Gaegu";
   background-color: #caa36e;
+  font-size: 25px;
 }
 .jumbotron {
   background-color: #caa36e;
   height: 220px;
   border-radius: 0px !important;
 }
-.small {
+hr.small {
   width: 25%;
-  border-color: black;
 }
 #secondDiv {
   margin-top: -30px;
   padding: 30px;
   background-color: #caa36e;
-  height: 600px;
+  height: 800px;
+}
+#firstHeading,
+#locationData,
+#weatherStatement {
+  color: black;
 }
 .boxData {
-  background-image: url("https://cdn.pixabay.com/photo/2018/03/31/19/34/nature-3279071_960_720.jpg");
+  background-color: #caa36e;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  border-radius: 25px;
+  height: 700px;
+}
+#convertTemp {
+  background-color: #caa36e;
+  border: none;
+  border-radius: 25px;
+  color: black;
+  font-size: 20px;
 }
 #data1,
 #data2,
 #data4,
-#data5,
-#data6 {
-  font-size: 30px;
+#data5 {
+  font-size: 20px;
   color: black;
   background-color: rgba(255, 255, 255, 0.75);
   padding: 10px;
@@ -35,7 +48,7 @@
 }
 #data3 {
   padding: 10px;
-  font-size: 60px;
+  font-size: 30px;
   color: black;
   background-color: rgba(255, 255, 255, 0.75);
   padding: 10px;
