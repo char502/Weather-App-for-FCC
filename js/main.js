@@ -12,25 +12,28 @@ $(document).ready(function() {
       var lon = Number(locationAll[1]);
       // console.log(locationData);
       // console.log(locationAll);
-      // console.log(lat);
-      // console.log(lon);
+      console.log(lat);
+      console.log(lon);
 
       var region = locationData.city;
-      console.log(region);
+      // console.log(region);
       var country = locationData.country;
-      console.log(country);
+      //console.log(country);
 
-      var weatherApi =
-        "https://fcc-weather-api.glitch.me/api/current?lat=" +
+      var newWeatherApi =
+        "https://cors.5apps.com/?uri=http://api.openweathermap.org/data/2.5/weather?lat=" +
         lat +
         "&lon=" +
-        lon;
+        lon +
+        "&units=metric" +
+        "&APPID=4b0eb1f18e238279f8d2f3a95669b602";
 
-      $.getJSON(weatherApi, function(data) {
+      console.log(newWeatherApi);
+
+      $.getJSON(newWeatherApi, function(data) {
         var data = JSON.stringify(data);
         var json = JSON.parse(data);
-
-        console.log(data);
+        //console.log(data);
         console.log(json);
 
         var wind = json.wind.speed;
@@ -42,13 +45,13 @@ $(document).ready(function() {
         var tempCel = Math.round(json.main.temp * 10) / 10;
         //convert Celsius to Fahrenheit and round to 1 decimal place
         var tempFah = Math.round((tempCel * 1.8 + 32) * 10) / 10;
-        console.log(tempCel);
-        console.log(tempFah);
+        // console.log(tempCel);
+        // console.log(tempFah);
 
         var humidity = json.main.humidity;
         //console.log(humidity);
         var cloud = json.clouds.all;
-        console.log(cloud);
+        // console.log(cloud);
 
         $("#locationData").html(region + ", " + country);
 
