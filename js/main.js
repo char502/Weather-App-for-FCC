@@ -1,29 +1,37 @@
 $(document).ready(function() {
   $(".small").hide();
-  if (navigator.geolocation) {
-    var currentPosition = "";
-    navigator.geolocation.getCurrentPosition(function(position) {
-      currentPosition = position;
 
-      var url =
+  getWeather();
+
+  function getWeather() {
+    var locationApi = "https://ipinfo.io/json";
+
+    $.getJSON(locationApi, function(locationData) {
+      var locationAll = locationData.loc.split(",");
+      var lat = Number(locationAll[0]);
+      var lon = Number(locationAll[1]);
+      // console.log(locationData);
+      // console.log(locationAll);
+      // console.log(lat);
+      // console.log(lon);
+
+      var region = locationData.city;
+      console.log(region);
+      var country = locationData.country;
+      console.log(country);
+
+      var weatherApi =
         "https://fcc-weather-api.glitch.me/api/current?lat=" +
-        position.coords.latitude +
+        lat +
         "&lon=" +
-        position.coords.longitude;
+        lon;
 
-      $.getJSON(url, function(data) {
-        //console.log(data);
-
+      $.getJSON(weatherApi, function(data) {
         var data = JSON.stringify(data);
         var json = JSON.parse(data);
 
-        //console.log(data);
+        console.log(data);
         console.log(json);
-
-        var region = json.name;
-        //console.log(region);
-        var country = json.sys.country;
-        //console.log(country);
 
         var wind = json.wind.speed;
         //console.log(wind);
