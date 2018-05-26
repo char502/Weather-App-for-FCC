@@ -42,7 +42,9 @@ $(document).ready(function() {
         //console.log(pressure);
 
         //temp to 1 decimal place
-        var tempCel = Math.round(json.main.temp * 10) / 10;
+        var tempCel = 35;
+            
+            Math.round(json.main.temp * 10) / 10;
         //convert Celsius to Fahrenheit and round to 1 decimal place
         var tempFah = Math.round((tempCel * 1.8 + 32) * 10) / 10;
         // console.log(tempCel);
